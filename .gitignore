@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Generated deliverables (may contain client data).
+salidas/
+
+# Official ISO PDFs: licensed, copyrighted material. Kept local only.
+Normas Oficiales/
+
+# Official ISO requirement text extracted to normas/<standard>/ is also
+# copyrighted: it stays on the auditor's machine and is never published.
+# Only the paraphrased guides (normas/comun/) and the NOTA.md placeholders
+# are versioned.
+normas/*/**/*.md
+!normas/comun/*.md
+!normas/*/NOTA.md
+
+# Real client documents or templates (any name ending in -real.docx).
+ejemplos/*-real.docx

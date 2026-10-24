@@ -1,0 +1,53 @@
+{
+  "name": "ehsq-consulting-os",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server that drafts the documents of an ISO management system clause by clause (Annex SL), grounded on the client's existing documents and on the normative text, with Word export and a runtime fidelity guard. Clause 4 complete (ISO 9001/14001/45001/37001).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edpauce/iso-agents.git"
+  },
+  "homepage": "https://github.com/edpauce/iso-agents#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "iso-9001",
+    "iso-14001",
+    "iso-45001",
+    "iso-37001",
+    "annex-sl",
+    "docx",
+    "anthropic",
+    "claude"
+  ],
+  "bin": {
+    "ehsq-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "dev": "node --env-file-if-exists=.env.local --import tsx src/index.ts",
+    "start": "node --env-file-if-exists=.env.local dist/index.js",
+    "inspect": "npx -y @modelcontextprotocol/inspector node --env-file-if-exists=.env.local --import tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "docx": "^9.7.1",
+    "docxtemplater": "^3.69.0",
+    "mammoth": "^1.12.0",
+    "pizzip": "^3.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
+  }
+}

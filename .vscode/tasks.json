@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "MCP Inspector",
+      "type": "shell",
+      "command": "npm run inspect",
+      "problemMatcher": [],
+      "detail": "Levanta el MCP Inspector para probar las herramientas en el navegador."
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": ["$tsc"],
+      "group": "build"
+    },
+    {
+      "label": "Typecheck",
+      "type": "shell",
+      "command": "npx tsc --noEmit",
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}
